@@ -146,7 +146,6 @@ static void AlignFishingAnimationFrames(void);
 
 static u8 TrySpinPlayerForWarp(struct ObjectEvent *object, s16 *a1);
 
-static void PlayerGoSlow(u8 direction);
 static bool8 (*const sForcedMovementTestFuncs[NUM_FORCED_MOVEMENTS])(u8) =
 
 {
@@ -639,7 +638,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
         {
             gPlayerAvatar.creeping = TRUE;
-            PlayerGoSlow(direction);
+            PlayerWalkSlow(direction);
         }
         else
         {
@@ -663,7 +662,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     else if (FlagGet(FLAG_SYS_DEXNAV_SEARCH) && (heldKeys & A_BUTTON))
     {
         gPlayerAvatar.creeping = TRUE;
-        PlayerGoSlow(direction);
+        PlayerWalkSlow(direction);
     }
     else
     {
