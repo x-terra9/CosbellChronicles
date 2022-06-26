@@ -3141,4 +3141,12 @@ extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
 
+// naming_screen
+extern const u8 gText_MoveOkBack[];
+extern const u8 gText_AlphabetUpperLower[];
+extern const u8 gText_YourName[];
+extern const u8 gText_BoxName[];
+extern const u8 gText_PkmnsNickname[];
+
+
 #endif // GUARD_STRINGS_H

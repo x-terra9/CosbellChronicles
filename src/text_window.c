@@ -99,6 +99,7 @@ void LoadMessageBoxGfx(u8 windowId, u16 destOffset, u8 palOffset)
     LoadPalette(GetOverworldTextboxPalettePtr(), palOffset, 0x20);
 }
 
+
 void LoadUserWindowBorderGfx_(u8 windowId, u16 destOffset, u8 palOffset)
 {
     LoadUserWindowBorderGfx(windowId, destOffset, palOffset);
