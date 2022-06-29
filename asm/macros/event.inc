@@ -1758,7 +1758,7 @@
     .endm
 
 	.macro showdescription
-	.byte 0xe3
+	.byte 0xe7
 	.endm
 
 	.macro showitemdesc
@@ -1772,7 +1772,7 @@
 	.endm
 
 	.macro hideitemdesc
-	.byte 0xe4
+	.byte 0xe8
 	.endm
 
 
