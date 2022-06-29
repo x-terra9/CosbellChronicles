@@ -8796,6 +8796,25 @@ extern const u8 gNamingScreenCursor_Gfx[];
 extern const u8 gNamingScreenInputArrow_Gfx[];
 extern const u8 gNamingScreenUnderscore_Gfx[];
 
+//Naming Screen
+extern const u8 gNamingScreenCursorTiles[];
+extern const u8 gNamingScreenActiveCursorSmallTiles[];
+extern const u8 gNamingScreenActiveCursorBigTiles[];
+extern const u8 gNamingScreenUnderscoreTiles[];
+extern const u32 gNamingScreenBGTiles[];
+extern const u32 gNamingScreenBGMap[];
+extern const u32 gNamingScreenButtonsEng[];
+extern const u32 gNamingScreenButtonsSpa[];
+extern const u32 gNamingScreenCharUpperMap[];
+extern const u32 gNamingScreenCharLowerMap[];
+extern const u32 gNamingScreenCharOtherMap[];
+extern const u16 gNamingScreenTextPal[];
+extern const u16 gNamingScreenPal[];
+extern const u16 gNamingScreenSelPal[];
+extern const u16 gSpriteImage_PcIcon0[];
+extern const u16 gSpriteImage_PcIcon1[];
+extern const u16 gNamingScreenPalettes[][16];
+
 extern const u32 gPokeblockFeedBg_Tilemap[];
 
 extern const u32 gConfetti_Gfx[];

@@ -2,6 +2,7 @@
 #define GUARD_WILD_ENCOUNTER_H
 
 #include "constants/wild_encounter.h"
+#define HIDDEN_WILD_COUNT   3
 
 struct WildPokemon
 {
@@ -23,6 +24,7 @@ struct WildPokemonHeader
     const struct WildPokemonInfo *landMonsInfo;
     const struct WildPokemonInfo *waterMonsInfo;
     const struct WildPokemonInfo *rockSmashMonsInfo;
+    const struct WildPokemonInfo *hiddenMonsInfo;
     const struct WildPokemonInfo *fishingMonsInfo;
 };
 
@@ -39,5 +41,10 @@ u16 GetLocalWildMon(bool8 *isWaterMon);
 u16 GetLocalWaterMon(void);
 bool8 UpdateRepelCounter(void);
 bool8 TryDoDoubleWildBattle(void);
+void CreateWildMon(u16 species, u8 level);
+u16 GetCurrentMapWildMonHeaderId(void);
+u8 ChooseWildMonIndex_Land(void);
+u8 ChooseWildMonIndex_WaterRock(void);
+u8 ChooseHiddenMonIndex(void);
 
 #endif // GUARD_WILD_ENCOUNTER_H

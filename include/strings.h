@@ -256,6 +256,7 @@ extern const u8 gText_MenuOption[];
 extern const u8 gText_MenuExit[];
 extern const u8 gText_MenuRetire[];
 extern const u8 gText_MenuRest[];
+extern const u8 gText_MenuDexNav[];
 extern const u8 gText_Floor1[];
 extern const u8 gText_Floor2[];
 extern const u8 gText_Floor3[];
@@ -3139,5 +3140,13 @@ extern const u8 gText_Summary2[];
 extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
+
+// naming_screen
+extern const u8 gText_MoveOkBack[];
+extern const u8 gText_AlphabetUpperLower[];
+extern const u8 gText_YourName[];
+extern const u8 gText_BoxName[];
+extern const u8 gText_PkmnsNickname[];
+
 
 #endif // GUARD_STRINGS_H

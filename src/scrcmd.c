@@ -995,6 +995,7 @@ bool8 ScrCmd_applymovement(struct ScriptContext *ctx)
     u16 localId = VarGet(ScriptReadHalfword(ctx));
     const void *movementScript = (const void *)ScriptReadWord(ctx);
 
+    gObjectEvents[GetObjectEventIdByLocalId(localId)].directionOverwrite = DIR_NONE;
     ScriptMovement_StartObjectMovementScript(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, movementScript);
     sMovingNpcId = localId;
     return FALSE;
@@ -1007,6 +1008,7 @@ bool8 ScrCmd_applymovementat(struct ScriptContext *ctx)
     u8 mapGroup = ScriptReadByte(ctx);
     u8 mapNum = ScriptReadByte(ctx);
 
+    gObjectEvents[GetObjectEventIdByLocalId(localId)].directionOverwrite = DIR_NONE;
     ScriptMovement_StartObjectMovementScript(localId, mapNum, mapGroup, movementScript);
     sMovingNpcId = localId;
     return FALSE;
@@ -2331,3 +2333,33 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
     ResetInitialPlayerAvatarState();
     return TRUE;
 }
+
+// follow me script commands
+#include "follow_me.h"
+bool8 ScrCmd_setfollower(struct ScriptContext *ctx)
+{
+    u8 localId = ScriptReadByte(ctx);
+    u16 flags = ScriptReadHalfword(ctx);
+    
+    SetUpFollowerSprite(localId, flags);
+    return FALSE;
+}
+
+bool8 ScrCmd_destroyfollower(struct ScriptContext *ctx)
+{
+    DestroyFollower();
+    return FALSE;
+}
+
+bool8 ScrCmd_facefollower(struct ScriptContext *ctx)
+{
+    PlayerFaceFollowerSprite();
+    return FALSE;
+}
+
+bool8 ScrCmd_checkfollower(struct ScriptContext *ctx)
+{
+    CheckPlayerHasFollower();
+    return FALSE;
+}
+
